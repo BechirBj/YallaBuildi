@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <a routerLink="/home" class="logo">PC Builder Pro</a>
+  <div class="nav-links">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/build" routerLinkActive="active">Build PC</a>
+    <a routerLink="/parts" routerLinkActive="active">Parts</a>
+    <a routerLink="/prebuilt" routerLinkActive="active">Prebuilt</a>
+    <a routerLink="/login" *ngIf="!IsLoggedIn">Login</a>
+    <a routerLink="/register" *ngIf="!IsLoggedIn">Register</a>
+    <a class="logout-button" href="#" (click)="logout()" *ngIf="IsLoggedIn">Logout</a>
+  </div>
+</nav>

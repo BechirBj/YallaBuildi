@@ -1,0 +1,110 @@
+.prebuilt-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .filters select {
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.25rem;
+    min-width: 200px;
+  }
+
+  .prebuilt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .pc-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .specs {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f3f4f6;
+    border-radius: 0.25rem;
+  }
+
+  .specs p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .performance {
+    margin: 1rem 0;
+  }
+
+  .game-fps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .fps {
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .fps.high {
+    background: #10b981;
+    color: white;
+  }
+
+  .fps.medium {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+
+  .buy-button {
+    padding: 0.5rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .buy-button:hover {
+    background: #1d4ed8;
+  }
+
+  @media (max-width: 768px) {
+    .prebuilt-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .filters {
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,50 @@
+<div class="building-container">
+  <h2>Build Your PC</h2>
+  <div class="build-steps">
+    <div class="component-selection">
+      <h3>Select Components</h3>
+      <div class="component-list">
+        <div *ngFor="let category of categories" class="component-item">
+          <label for="{{ category }}">{{ category }}</label>
+          <select (change)="selectPart($event, category)">
+            <option value="" disabled selected>Choose {{ category }}</option>
+            <option
+              *ngFor="let part of filterPartsByCategory(category)"
+              [value]="part.id"
+            >
+              {{ part.name }} ({{ part.price | currency }})
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="build-summary">
+      <h3>Build Summary</h3>
+      <div class="summary-details">
+        <p>Total Price: ${{ totalPrice }}</p>
+        <ul>
+          <li *ngFor="let category of categories">
+            <strong>{{ category }}:</strong>
+            <ul *ngIf="selectedParts[category]">
+              <li>
+                {{ selectedParts[category].name }} ({{
+                  selectedParts[category].price | currency
+                }})
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="down-buttons">
+        <button class="summary-button finalize-button">Finalize Build</button>
+        <button class="print-button" (click)="generatePDF()">
+          <i class="material-icons">print</i>
+          Print
+        </button>
+      </div>
+      
+      
+      </div>
+  </div>
+</div>

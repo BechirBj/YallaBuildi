@@ -1,0 +1,192 @@
+/* General container styling */
+.building-container {
+  padding: 2rem;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 2rem auto;
+  color: #2d3748;
+}
+
+/* Header styling */
+.building-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  color: #1a202c;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Build steps layout */
+.build-steps {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Component selection section */
+.component-selection {
+  flex: 2;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.component-selection h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #2d3748;
+}
+
+/* Component list styling */
+.component-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.component-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.component-item:hover {
+  background: #edf2f7;
+  transform: translateY(-2px);
+}
+
+/* Select dropdown styling */
+select {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background: white;
+  width: 70%;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 4px rgba(49, 130, 206, 0.5);
+  outline: none;
+}
+
+/* Build summary section */
+.build-summary {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.build-summary h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #2d3748;
+}
+
+.summary-details {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+.summary-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.summary-details ul li {
+  margin: 0.5rem 0;
+}
+
+.summary-details strong {
+  color: #1a202c;
+}
+
+/* Button styling */
+.summary-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.finalize-button {
+  background: linear-gradient(135deg, #1f2937, #38b2ac);
+  color: white;
+}
+
+.finalize-button:hover {
+  background: linear-gradient(135deg, #1f2937, #38b2ac);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Print button styling */
+.print-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #1f2937;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.print-button:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.print-button i {
+  margin-right: 0.5rem;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .build-steps {
+    flex-direction: column;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .summary-button {
+    width: 100%;
+  }
+}
+
+.down-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}

@@ -1,0 +1,192 @@
+{
+  "users": [
+    {
+      "id": "5b19",
+      "name": "bechir",
+      "email": "bechir@gmail.com",
+      "password": "bechir123",
+      "BuildId":""
+    }
+  ],
+  "parts": [
+    {
+      "id": 1,
+      "name": "AMD Ryzen 7 5800X",
+      "categoryId": 1,
+      "categoryName": "CPU",
+      "price": 299.99,
+      "brand": "AMD",
+      "imageUrl": "assets/RYZEN_7_5800X.jpg",
+      "description": "8-core CPU for gaming"
+    },
+    {
+      "id": 3,
+      "name": "Intel Core i9-11900K",
+      "categoryId": 1,
+      "categoryName": "CPU",
+      "price": 499.99,
+      "brand": "Intel",
+      "imageUrl": "assets/i9-11900K.jpg",
+      "description": "High-end 8-core CPU for enthusiasts"
+    },
+    {
+      "id": 2,
+      "name": "NVIDIA RTX 4070",
+      "categoryId": 2,
+      "categoryName": "GPU",
+      "price": 599.99,
+      "brand": "NVIDIA",
+      "imageUrl": "assets/4070.jpg",
+      "description": "High-performance GPU"
+    },
+    {
+      "id": 4,
+      "name": "AMD Radeon RX 6800 XT",
+      "categoryId": 2,
+      "categoryName": "GPU",
+      "price": 649.99,
+      "brand": "AMD",
+      "imageUrl": "assets/RX 6800 XT.jpg",
+      "description": "Powerful AMD GPU for gaming"
+    },
+    {
+      "id": 5,
+      "name": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4",
+      "categoryId": 3,
+      "categoryName": "RAM",
+      "price": 89.99,
+      "brand": "Corsair",
+      "imageUrl": "assets/corsair vengence.jpg",
+      "description": "High-performance RAM for gaming"
+    },
+    {
+      "id": 6,
+      "name": "G.SKILL Ripjaws V 16GB (2 x 8GB) DDR4",
+      "categoryId": 3,
+      "categoryName": "RAM",
+      "price": 75.99,
+      "brand": "G.SKILL",
+      "imageUrl": "",
+      "description": "Reliable RAM for gaming and multitasking"
+    },
+    {
+      "id": 7,
+      "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
+      "categoryId": 4,
+      "categoryName": "Storage",
+      "price": 139.99,
+      "brand": "Samsung",
+      "imageUrl": "assets/samsung 970 evo.webp",
+      "description": "Fast and reliable storage solution"
+    },
+    {
+      "id": 8,
+      "name": "Western Digital Black SN850 1TB SSD",
+      "categoryId": 4,
+      "categoryName": "Storage",
+      "price": 149.99,
+      "brand": "Western Digital",
+      "imageUrl": "",
+      "description": "Ultra-fast NVMe storage"
+    },
+    {
+      "id": 9,
+      "name": "MSI MAG B550 TOMAHAWK WIFI",
+      "categoryId": 5,
+      "categoryName": "Motherboard",
+      "price": 149.99,
+      "brand": "MSI",
+      "imageUrl": "assets/mag b550.png",
+      "description": "AM4 socket motherboard with WiFi"
+    },
+    {
+      "id": 10,
+      "name": "ASUS ROG Strix Z590-E",
+      "categoryId": 5,
+      "categoryName": "Motherboard",
+      "price": 279.99,
+      "brand": "ASUS",
+      "imageUrl": "assets/ROX Stric Z590-E.jpg",
+      "description": "Premium Z590 motherboard for Intel 10th\\11th gen"
+    },
+    {
+      "id": 11,
+      "name": "Corsair RM750x 750W PSU",
+      "categoryId": 6,
+      "categoryName": "PSU",
+      "price": 109.99,
+      "brand": "Corsair",
+      "imageUrl": "assets/corsair RM750X.jpg",
+      "description": "Efficient and quiet 750W power supply"
+    },
+    {
+      "id": 12,
+      "name": "EVGA SuperNOVA 650 G5",
+      "categoryId": 6,
+      "categoryName": "PSU",
+      "price": 99.99,
+      "brand": "EVGA",
+      "imageUrl": "",
+      "description": "650W PSU with 80+ Gold certification"
+    },
+    {
+      "id": 13,
+      "name": "NZXT H510 ATX Mid Tower Case",
+      "categoryId": 7,
+      "categoryName": "Case",
+      "price": 79.99,
+      "brand": "NZXT",
+      "imageUrl": "assets/h510.jpg",
+      "description": "Compact and sleek case with tempered glass"
+    },
+    {
+      "id": 14,
+      "name": "Fractal Design Meshify C",
+      "categoryId": 7,
+      "categoryName": "Case",
+      "price": 89.99,
+      "brand": "Fractal Design",
+      "imageUrl": "assets/fractal Design.jpg",
+      "description": "Mesh front panel for optimal airflow"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "CPU",
+      "description": "Central Processing Unit, the brain of the computer."
+    },
+    {
+      "id": 2,
+      "name": "GPU",
+      "description": "Graphics Processing Unit, responsible for rendering visuals."
+    },
+    {
+      "id": 3,
+      "name": "RAM",
+      "description": "Random Access Memory, short-term data storage for active processes."
+    },
+    {
+      "id": 4,
+      "name": "Storage",
+      "description": "Long-term data storage, includes SSDs and HDDs."
+    },
+    {
+      "id": 5,
+      "name": "Motherboard",
+      "description": "The main circuit board connecting all components."
+    },
+    {
+      "id": 6,
+      "name": "PSU",
+      "description": "Power Supply Unit, which provides electrical power to the PC components."
+    },
+    {
+      "id": 7,
+      "name": "Case",
+      "description": "The enclosure that houses all the computer components."
+    }
+  ],
+  "prebuilt":[
+  ]
+}
