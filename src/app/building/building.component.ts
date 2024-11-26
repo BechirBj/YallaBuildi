@@ -11,7 +11,7 @@ import 'jspdf-autotable';
 })
 export class BuildingComponent implements OnInit {
   parts: Part[] = [];
-  categories: string[] = ['CPU', 'GPU', 'RAM', 'Storage', 'Motherboard', 'PSU', 'Case'];
+  categories: string[] = ['CPU', 'GPU', 'RAM', 'Storage', 'MotherBoard', 'PSU', 'Case'];
   selectedParts: { [key: string]: Part } = {};
   totalPrice = 0 ;
   constructor(private partService: PartService) {}

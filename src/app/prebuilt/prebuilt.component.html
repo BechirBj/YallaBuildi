@@ -1,97 +1,63 @@
 <div class="prebuilt-container">
-    <h2>Prebuilt Gaming PCs</h2>
-    
-    <div class="filters">
-      <select class="price-filter">
-        <option value="">Price Range</option>
-        <option value="budget">Budget ($800-$1200)</option>
-        <option value="mid">Mid-Range ($1200-$2000)</option>
-        <option value="high">High-End ($2000+)</option>
-      </select>
-      
-      <select class="game-filter">
-        <option value="">Select Game</option>
-        <option value="cyberpunk">Cyberpunk 2077</option>
-        <option value="fortnite">Fortnite</option>
-        <option value="warzone">Warzone</option>
-        <option value="minecraft">Minecraft</option>
-      </select>
-    </div>
+  <h2>Prebuilt Gaming PCs</h2>
+  <div>
+    <button class="btn btn-dark" [routerLink]="'/addpc'">Prebuilt</button>
+  </div>
 
-    <div class="prebuilt-grid">
-      <div class="pc-card">
-        <h3>Pro Gamer Elite</h3>
-        <div class="specs">
-          <p>CPU: AMD Ryzen 9 7950X</p>
-          <p>GPU: NVIDIA RTX 4090</p>
-          <p>RAM: 32GB DDR5</p>
-          <p>Storage: 2TB NVMe SSD</p>
+  <div class="filters">
+    <select class="price-filter">
+      <option value="">Price Range</option>
+      <option value="budget">Budget ($800-$1200)</option>
+      <option value="mid">Mid-Range ($1200-$2000)</option>
+      <option value="high">High-End ($2000+)</option>
+    </select>
+  </div>
+
+  <div class="prebuilt-grid">
+    <div class="pc-card" *ngFor="let pc of PrebuiltPcs">
+      <img
+        [src]="pc.imageUrl"
+        alt="{{ pc.name }}"
+        class="pc-image"
+        style="width: 100%; border-radius: 0.5rem;"
+      />
+      <h3>{{ pc.name }}</h3>
+      <div class="specs">
+        <p *ngFor="let part of pc.parts">
+          <strong>{{ part.categoryName }}</strong>: {{ part.name }}
+        </p>
+      </div>
+      <div class="performance">
+        <h4>Gaming Performance</h4>
+        <div class="game-fps">
+          <span>Cyberpunk 2077 :</span>
+          <span class="fps medium">
+            {{
+              pc.totalPrice > 2000
+                ? '90 FPS'
+                : pc.totalPrice > 1200
+                ? '75 FPS'
+                : '60 FPS'
+            }}
+          </span>
         </div>
-        <div class="performance">
-          <h4>Gaming Performance</h4>
-          <div class="game-fps">
-            <span>Cyberpunk 2077 (4K Ultra):</span>
-            <span class="fps high">90 FPS</span>
-          </div>
-          <div class="game-fps">
-            <span>Warzone (4K High):</span>
-            <span class="fps high">144+ FPS</span>
-          </div>
-        </div>
-        <div class="price-action">
-          <span class="price">$3,499</span>
-          <button class="buy-button">Buy Now</button>
+        <div class="game-fps">
+          <span>Warzone:</span>
+          <span class="fps high">
+            {{
+              pc.totalPrice > 2000
+                ? '144+ FPS'
+                : pc.totalPrice > 1200
+                ? '120 FPS'
+                : '100 FPS'
+            }}
+          </span>
         </div>
       </div>
-
-      <div class="pc-card">
-        <h3>Mid-Range Master</h3>
-        <div class="specs">
-          <p>CPU: AMD Ryzen 7 7700X</p>
-          <p>GPU: NVIDIA RTX 4070</p>
-          <p>RAM: 16GB DDR5</p>
-          <p>Storage: 1TB NVMe SSD</p>
-        </div>
-        <div class="performance">
-          <h4>Gaming Performance</h4>
-          <div class="game-fps">
-            <span>Cyberpunk 2077 (1440p High):</span>
-            <span class="fps medium">75 FPS</span>
-          </div>
-          <div class="game-fps">
-            <span>Warzone (1440p High):</span>
-            <span class="fps high">120 FPS</span>
-          </div>
-        </div>
-        <div class="price-action">
-          <span class="price">$1,699</span>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-
-      <div class="pc-card">
-        <h3>Budget Beast</h3>
-        <div class="specs">
-          <p>CPU: AMD Ryzen 5 7600X</p>
-          <p>GPU: NVIDIA RTX 4060</p>
-          <p>RAM: 16GB DDR5</p>
-          <p>Storage: 500GB NVMe SSD</p>
-        </div>
-        <div class="performance">
-          <h4>Gaming Performance</h4>
-          <div class="game-fps">
-            <span>Cyberpunk 2077 (1080p High):</span>
-            <span class="fps medium">60 FPS</span>
-          </div>
-          <div class="game-fps">
-            <span>Warzone (1080p High):</span>
-            <span class="fps high">100 FPS</span>
-          </div>
-        </div>
-        <div class="price-action">
-          <span class="price">$999</span>
-          <button class="buy-button">Buy Now</button>
-        </div>
+      <div class="price-action">
+        <span class="price">${{ pc.totalPrice }}</span>
+        <button class="buy-button">Buy Now</button>
       </div>
     </div>
   </div>
+</div>

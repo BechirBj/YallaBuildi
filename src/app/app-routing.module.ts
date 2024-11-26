@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PrebuiltComponent } from './prebuilt/prebuilt.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AddPrebuildComponent } from './add-prebuild/add-prebuild.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'build', component: BuildingComponent },
   { path: 'parts', component: PartsComponent },
   { path: 'prebuilt', component: PrebuiltComponent },
+  { path: 'addpc', component: AddPrebuildComponent },
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   { path: '**', component: PageNotFoundComponent },

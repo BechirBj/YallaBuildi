@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
+import { AddPrebuildComponent } from './add-prebuild/add-prebuild.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {  HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     PrebuiltComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddPrebuildComponent
   ],
   imports: [
     BrowserModule,
