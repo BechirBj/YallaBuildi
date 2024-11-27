@@ -16,14 +16,13 @@ const routes: Routes = [
   { path: 'parts', component: PartsComponent },
   { path: 'prebuilt', component: PrebuiltComponent },
   { path: 'addpc', component: AddPrebuildComponent },
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', component: PageNotFoundComponent },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

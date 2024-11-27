@@ -36,7 +36,6 @@
 }
 
 /* Pre-Built PCs Section */
-/* Pre-Built PCs Section */
 .pc-collection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -60,6 +59,7 @@
 .pc p {
     margin: 0.5rem 0;
 }
+
 .pc:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -67,12 +67,11 @@
 
 .pc-image {
     width: 100%;
-    max-height: 200px;
-    object-fit: cover;
+    max-height: 50%;
+    object-fit: fill;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
-
 
 /* Testimonials */
 .testimonials {

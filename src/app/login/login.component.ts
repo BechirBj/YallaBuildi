@@ -30,11 +30,10 @@ export class LoginComponent {
   
       this.userService.Login(email, password).subscribe(
         (response) => {
-          // console.log(response.length);
           if (response.length > 0) {
             const user = response[0]; 
             console.log('Login successful:', user);
-            localStorage.setItem('User', JSON.stringify({ email: 'test@example.com' }));
+            localStorage.setItem('User', JSON.stringify({ email: user.email}));
             this.authService.login(); 
             this.router.navigate(['/home']);
         
