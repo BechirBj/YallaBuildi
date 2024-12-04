@@ -8,6 +8,9 @@ import { PrebuiltComponent } from './prebuilt/prebuilt.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AddPrebuildComponent } from './add-prebuild/add-prebuild.component';
+import { PaymentComponent } from './payment/payment.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddpartComponent } from './addpart/addpart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,9 +19,13 @@ const routes: Routes = [
   { path: 'parts', component: PartsComponent },
   { path: 'prebuilt', component: PrebuiltComponent },
   { path: 'addpc', component: AddPrebuildComponent },
+  { path: 'addpart', component: AddpartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'payment', component: PaymentComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '**', component: PageNotFoundComponent },
+
 ];
 
 @NgModule({

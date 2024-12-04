@@ -1,6 +1,6 @@
 export interface Part {
     categoryName: any;
-    id?: number;
+    id: number;
     name: string;
     categoryId: number;
     price: number;

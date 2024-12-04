@@ -1,0 +1,90 @@
+<div class="container">
+  <h2>Add New Part</h2>
+  <form [formGroup]="partForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Part Name</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        class="form-control"
+        placeholder="Enter part name"
+      />
+      <div *ngIf="partForm.get('name')?.invalid && partForm.get('name')?.touched" class="text-danger">
+        Part name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select
+        id="category"
+        formControlName="categoryId"
+        class="form-control"
+      >
+        <option value="" disabled>Select a category</option>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+      <div *ngIf="partForm.get('categoryId')?.invalid && partForm.get('categoryId')?.touched" class="text-danger">
+        Category is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        id="price"
+        type="number"
+        formControlName="price"
+        class="form-control"
+        placeholder="Enter price"
+      />
+      <div *ngIf="partForm.get('price')?.invalid && partForm.get('price')?.touched" class="text-danger">
+        <div *ngIf="partForm.get('price')?.hasError('required')">Price is required.</div>
+        <div *ngIf="partForm.get('price')?.hasError('min')">Price must be greater than or equal to 0.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="brand">Brand</label>
+      <input
+        id="brand"
+        type="text"
+        formControlName="brand"
+        class="form-control"
+        placeholder="Enter brand"
+      />
+      <div *ngIf="partForm.get('brand')?.invalid && partForm.get('brand')?.touched" class="text-danger">
+        Brand is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl">Image URL</label>
+      <input
+        id="imageUrl"
+        type="text"
+        formControlName="imageUrl"
+        class="form-control"
+        placeholder="Enter image URL"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        class="form-control"
+        rows="3"
+        placeholder="Enter description"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="partForm.invalid">
+      Add Part
+    </button>
+  </form>
+</div>

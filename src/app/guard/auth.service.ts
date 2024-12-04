@@ -16,6 +16,7 @@ export class AuthService {
     localStorage.setItem('LoggedIn', 'true');
     this.isLoggedInSubject.next(true);
   }
+  
 
   logout(): void {
     localStorage.removeItem('User');

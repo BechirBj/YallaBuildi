@@ -7,6 +7,7 @@
     <a routerLink="/prebuilt" routerLinkActive="active">Prebuilt</a>
     <a routerLink="/login" *ngIf="!IsLoggedIn">Login</a>
     <a routerLink="/register" *ngIf="!IsLoggedIn">Register</a>
+    <a routerLink="/dashboard" *ngIf="IsLoggedIn && email === 'bechir@gmail.com'">DashBoard</a>
     <a class="logout-button" href="#" (click)="logout()" *ngIf="IsLoggedIn">Logout</a>
   </div>
 </nav>

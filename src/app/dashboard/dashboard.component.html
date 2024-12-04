@@ -1,0 +1,101 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1>Admin Dashboard</h1>
+  </header>
+
+  <main class="dashboard-content">
+    <!-- Tabs for Parts and Prebuilt Management -->
+    <div class="dashboard-tabs">
+      <button
+        [class.active]="activeTab === 'parts'"
+        (click)="setActiveTab('parts')"
+      >
+        Manage Parts
+      </button>
+      <button
+        [class.active]="activeTab === 'prebuilt'"
+        (click)="setActiveTab('prebuilt')"
+      >
+        Manage Prebuilts
+      </button>
+    </div>
+
+<!-- Content for Parts Management -->
+<div *ngIf="activeTab === 'parts'" class="parts-management">
+  <h2>Parts Management</h2>
+  <button class="add-button" [routerLink]="'/addpart'">Add New Part</button>
+
+  <div class="parts-list">
+    <label for="category-filter">Filter by Category:</label>
+    <select id="category-filter" [(ngModel)]="selectedCategory" (change)="filterPartsByCategory()">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let part of filteredParts">
+        <td><img  class="height:100%" [src]="part.imageUrl" alt="Part Image"></td>
+        <td>{{ part.name }}</td>
+        <td>{{ part.price | currency }}</td>
+        <td>
+          <!-- <button (click)="editPart(part)">Edit</button> -->
+          <button (click)="deletePart(part.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+    <!-- Content for Prebuilt Management -->
+    <div *ngIf="activeTab === 'prebuilt'" class="prebuilt-management">
+      <h2>Prebuilt Management</h2>
+      <button class="btn btn-dark" [routerLink]="'/addpc'">Add a PreBuilt Pc</button>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Image
+            </th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Components</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prebuilt of PrebuiltPcs">
+            <td>
+              <img
+        [src]="prebuilt.imageUrl"
+        alt="{{ prebuilt.name }}"
+        class="pc-image"
+        style="width: 50%; border-radius: 0.5rem;"
+      />
+            </td>
+            <td>{{ prebuilt.name }}</td>
+            <td>{{ prebuilt.totalPrice  }}</td>
+            <td>
+              <p *ngFor="let part of prebuilt.parts">
+              <strong>{{ part.categoryName }}</strong>: {{ part.name }}
+            </p>
+          </td>
+            <td class="buttons">
+              <button (click)="deletePrebuilt(prebuilt.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>

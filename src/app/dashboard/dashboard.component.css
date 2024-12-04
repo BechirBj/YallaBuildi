@@ -1,0 +1,202 @@
+.dashboard-container {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1f2937; 
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  padding: 20px;
+  background-color: #2d3748; 
+  color: #9f7aea; 
+  text-align: center;
+  border-bottom: 2px solid #4c9aff;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.parts-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Content Area */
+.dashboard-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+.dashboard-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-tabs button {
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  background-color: #2d3748;
+  color: #9f7aea;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-tabs button.active {
+  background-color: #4c9aff;
+  color: #1f2937;
+  border: 2px solid #9f7aea;
+}
+
+.dashboard-tabs button:hover {
+  background-color: #3b4758;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #2d3748;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  border: 1px solid #4c9aff;
+  padding: 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: #3b4758;
+  color: #9f7aea;
+  font-weight: 600;
+}
+
+table td {
+  color: #f1f5f9;
+}
+
+table tr:hover {
+  background-color: #3b4758;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 15px;
+  font-size: 0.95em;
+  font-weight: 500;
+  background-color: #4c9aff;
+  color: #1f2937;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #337fcc;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Add New Buttons */
+button.add-button {
+  margin-bottom: 15px;
+  background-color: #4caf50; 
+}
+
+button.add-button:hover {
+  background-color: #3d8f3d;
+}
+
+/* Highlighted Elements */
+h2 {
+  color: #9f7aea;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Category Filter Dropdown */
+#category-filter {
+  padding: 10px;
+  background-color: #2d3748;
+  border: 1px solid #4c9aff;
+  color: #f1f5f9;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#category-filter option {
+  background-color: #2d3748;
+  color: #f1f5f9;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Image styling for Parts Table */
+table td img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image styling for Prebuilt PC Table */
+.pc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  max-width: 150px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .dashboard-tabs {
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.85em;
+    padding: 6px 12px;
+  }
+
+  #category-filter {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

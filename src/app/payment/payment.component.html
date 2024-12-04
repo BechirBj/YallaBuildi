@@ -1,0 +1,42 @@
+<div class="payment-summary-container">
+    <div class="summary-details">
+      <h2>Payment Summary</h2>
+      <p>Total Price: {{ totalPrice | currency }}</p>
+      <ul class="parts-list">
+        <li *ngFor="let category of categories">
+          <strong>{{ category }}:</strong>
+          <ul *ngIf="PC[category]">
+            <li>
+              {{ PC[category].name }} ({{ PC[category].price | currency }})
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="payment-methods">
+      <h3>Select Payment Method</h3>
+      <div class="payment-buttons">
+        <!-- Apple Pay Button -->
+        <button class="payment-button apple-pay">
+            <i class="fab fa-apple"></i> Pay with Apple Pay
+          </button>
+          
+          <button class="payment-button paypal">
+            <i class="fab fa-paypal"></i> Pay with PayPal
+          </button>
+          
+          <button class="payment-button card">
+            <i class="fas fa-credit-card"></i> Pay with Credit/Debit Card
+          </button>
+          
+          <button class="payment-button other">
+            <i class="fas fa-dollar-sign"></i> Other Payment Methods
+          </button>
+          
+      </div>
+    </div>
+  
+    <button class="finalize-button" (click)="processPayment()">Finalize Payment</button>
+  </div>
+  

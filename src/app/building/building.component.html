@@ -37,14 +37,17 @@
         </ul>
       </div>
       <div class="down-buttons">
-        <button class="summary-button finalize-button">Finalize Build</button>
+        <button
+          class="summary-button finalize-button"
+          (click)="finalizeBuild()"
+        >
+          Finalize Build
+        </button>
         <button class="print-button" (click)="generatePDF()">
           <i class="material-icons">print</i>
           Print
         </button>
       </div>
-      
-      
-      </div>
+    </div>
   </div>
 </div>

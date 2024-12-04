@@ -4,6 +4,7 @@ import { PartService } from '../Services/PartsService/part.service';
 import { Part } from '../modele/parts';
 import { PrebuiltService } from '../Services/PrebuiltService/prebuilt.service';
 import { PreBuilt } from '../modele/prebuilt';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-prebuild',
@@ -17,6 +18,7 @@ export class AddPrebuildComponent implements OnInit {
   prebuiltPCs: PreBuilt[] = []; 
   constructor(private fb: FormBuilder, private partService: PartService,
     private prebuiltService:PrebuiltService,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -95,6 +97,7 @@ export class AddPrebuildComponent implements OnInit {
         totalPrice: selectedParts.reduce((sum, part) => sum + part.price, 0), // Assuming `Part` has a `price` field
         description: this.prebuildForm.value.description,
         imageUrl: this.prebuildForm.value.imageUrl,
+        id: 0
       };
   
       console.log('New PreBuilt:', newPreBuilt);
@@ -103,6 +106,8 @@ export class AddPrebuildComponent implements OnInit {
         next: () => {
           alert('Prebuilt PC added successfully!');
           this.prebuildForm.reset();
+          this.router.navigate(['/dashboard']);
+
         },
         error: (error) => console.error('Error saving prebuilt:', error),
       });

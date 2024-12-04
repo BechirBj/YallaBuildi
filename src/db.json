@@ -6,6 +6,12 @@
       "email": "bechir@gmail.com",
       "password": "bechir123",
       "BuildId": ""
+    },
+    {
+      "id": "9bf2",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "test123"
     }
   ],
   "parts": [
@@ -60,16 +66,6 @@
       "description": "High-performance RAM for gaming"
     },
     {
-      "id": "6",
-      "name": "G.SKILL Ripjaws V 16GB (2 x 8GB) DDR4",
-      "categoryId": 3,
-      "categoryName": "RAM",
-      "price": 75.99,
-      "brand": "G.SKILL",
-      "imageUrl": "",
-      "description": "Reliable RAM for gaming and multitasking"
-    },
-    {
       "id": "7",
       "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
       "categoryId": 4,
@@ -78,16 +74,6 @@
       "brand": "Samsung",
       "imageUrl": "assets/samsung 970 evo.webp",
       "description": "Fast and reliable storage solution"
-    },
-    {
-      "id": "8",
-      "name": "Western Digital Black SN850 1TB SSD",
-      "categoryId": 4,
-      "categoryName": "Storage",
-      "price": 149.99,
-      "brand": "Western Digital",
-      "imageUrl": "",
-      "description": "Ultra-fast NVMe storage"
     },
     {
       "id": "9",
@@ -120,16 +106,6 @@
       "description": "Efficient and quiet 750W power supply"
     },
     {
-      "id": "12",
-      "name": "EVGA SuperNOVA 650 G5",
-      "categoryId": 6,
-      "categoryName": "PSU",
-      "price": 99.99,
-      "brand": "EVGA",
-      "imageUrl": "",
-      "description": "650W PSU with 80+ Gold certification"
-    },
-    {
       "id": "13",
       "name": "NZXT H510 ATX Mid Tower Case",
       "categoryId": 7,
@@ -148,6 +124,26 @@
       "brand": "Fractal Design",
       "imageUrl": "assets/fractal Design.jpg",
       "description": "Mesh front panel for optimal airflow"
+    },
+    {
+      "id": "f8b4",
+      "name": "sqdf",
+      "categoryId": "7",
+      "categoryName": "PSU",
+      "price": 123,
+      "brand": "Razer",
+      "imageUrl": "assets/4070.jpg",
+      "description": "good psu"
+    },
+    {
+      "id": "25e9",
+      "name": "ryzen 9 7950x",
+      "categoryId": "1",
+      "categoryName": "CPU",
+      "price": 120,
+      "brand": "Ryzen",
+      "imageUrl": "assets/ryzen9.jpg",
+      "description": "Powerfull cpu"
     }
   ],
   "category": [

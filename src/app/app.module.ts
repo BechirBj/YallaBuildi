@@ -14,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 import { AddPrebuildComponent } from './add-prebuild/add-prebuild.component';
+import { PaymentComponent } from './payment/payment.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddpartComponent } from './addpart/addpart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { AddPrebuildComponent } from './add-prebuild/add-prebuild.component';
     PrebuiltComponent,
     LoginComponent,
     RegisterComponent,
-    AddPrebuildComponent
+    AddPrebuildComponent,
+    PaymentComponent,
+    DashboardComponent,
+    AddpartComponent
   ],
   imports: [
     BrowserModule,

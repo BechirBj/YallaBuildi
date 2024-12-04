@@ -25,13 +25,8 @@ export class PrebuiltService {
   AddPrebuilt(Prebuilt:PreBuilt):Observable<PreBuilt> {
     return this.httpClient.post<PreBuilt>(this.host, Prebuilt);
   }
-
-  UpdatePreBuilt(part: PreBuilt): Observable<PreBuilt> {
-    return this.httpClient.put<PreBuilt>(`${this.host}/${part.id}`, part);
-  }
-
+  
   DeletePreBuilt(id: number): Observable<any> {
     return this.httpClient.delete<any>(`${this.host}/${id}`);
   }
-
 }
