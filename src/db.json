@@ -12,6 +12,12 @@
       "name": "test",
       "email": "test@gmail.com",
       "password": "test123"
+    },
+    {
+      "id": "dc66",
+      "name": "jasser",
+      "email": "jasser@gmail.com",
+      "password": "jasser123"
     }
   ],
   "parts": [
@@ -144,6 +150,15 @@
       "brand": "Ryzen",
       "imageUrl": "assets/ryzen9.jpg",
       "description": "Powerfull cpu"
+    },
+    {
+      "id": "a0b0",
+      "name": "to delete",
+      "categoryId": "2",
+      "price": 44545,
+      "brand": "454",
+      "imageUrl": "fsdfsd",
+      "description": "dfvdfvfd"
     }
   ],
   "category": [

@@ -22,10 +22,8 @@ export class PaymentComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // Retrieve query params
     this.route.queryParams.subscribe((params) => {
       if (params['selectedParts']) {
-        // Deserialize the selected parts JSON string
         this.PC = JSON.parse(params['selectedParts']);
       }
       this.totalPrice = params['totalPrice'];

@@ -163,8 +163,6 @@ export class BuildingComponent implements OnInit {
   finalizeBuild() {
     const selectedParts = this.selectedParts;
     const totalPrice = this.totalPrice;
-
-    // Make sure the selected parts are serialized properly
     const serializedParts = JSON.stringify(selectedParts);
 
     this.router.navigate(['/payment'], {

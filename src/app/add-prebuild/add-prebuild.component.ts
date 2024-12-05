@@ -15,10 +15,12 @@ export class AddPrebuildComponent implements OnInit {
   prebuildForm!: FormGroup;
   parts: Part[] = [];
   categories: { [key: string]: Part[] } = {};
-  prebuiltPCs: PreBuilt[] = []; 
-  constructor(private fb: FormBuilder, private partService: PartService,
-    private prebuiltService:PrebuiltService,
-    private router : Router
+  prebuiltPCs: PreBuilt[] = [];
+  constructor(
+    private fb: FormBuilder,
+    private partService: PartService,
+    private prebuiltService: PrebuiltService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class AddPrebuildComponent implements OnInit {
       storage: ['', Validators.required],
       case: ['', Validators.required],
       description: ['', [Validators.required, Validators.minLength(10)]],
-      imageUrl: ['', [Validators.required, ]],
+      imageUrl: ['', [Validators.required]],
     });
   }
 
@@ -48,9 +50,9 @@ export class AddPrebuildComponent implements OnInit {
       GPU: [],
       RAM: [],
       STORAGE: [],
-      MOTHERBOARD: [], 
+      MOTHERBOARD: [],
       PSU: [],
-      CASE: [], 
+      CASE: [],
     };
   }
 
@@ -66,17 +68,17 @@ export class AddPrebuildComponent implements OnInit {
 
   private categorizeParts(): void {
     this.parts.forEach((part) => {
-      const normalizedCategoryName = part.categoryName.toUpperCase(); 
+      const normalizedCategoryName = part.categoryName.toUpperCase();
       if (this.categories[normalizedCategoryName]) {
         this.categories[normalizedCategoryName].push(part);
       } else {
         console.warn(`Unknown category: ${part.categoryName}`);
       }
     });
-  
+
     console.log('Categorized Parts:', this.categories);
   }
-  
+
   onSubmit(): void {
     if (this.prebuildForm.valid) {
       const selectedPartIds = [
@@ -88,26 +90,27 @@ export class AddPrebuildComponent implements OnInit {
         this.prebuildForm.value.storage,
         this.prebuildForm.value.case,
       ];
-  
-      const selectedParts: Part[] = this.parts.filter(part => selectedPartIds.includes(part.id));
-  
+
+      const selectedParts: Part[] = this.parts.filter((part) =>
+        selectedPartIds.includes(part.id)
+      );
+
       const newPreBuilt: PreBuilt = {
         name: this.prebuildForm.value.name,
         parts: selectedParts,
-        totalPrice: selectedParts.reduce((sum, part) => sum + part.price, 0), // Assuming `Part` has a `price` field
+        totalPrice: selectedParts.reduce((sum, part) => sum + part.price, 0),
         description: this.prebuildForm.value.description,
         imageUrl: this.prebuildForm.value.imageUrl,
-        id: 0
+        id: 0,
       };
-  
+
       console.log('New PreBuilt:', newPreBuilt);
-  
+
       this.prebuiltService.AddPrebuilt(newPreBuilt).subscribe({
         next: () => {
           alert('Prebuilt PC added successfully!');
           this.prebuildForm.reset();
           this.router.navigate(['/dashboard']);
-
         },
         error: (error) => console.error('Error saving prebuilt:', error),
       });
@@ -115,6 +118,4 @@ export class AddPrebuildComponent implements OnInit {
       console.error('Form is invalid. Please fill in all required fields.');
     }
   }
-
-  
 }
